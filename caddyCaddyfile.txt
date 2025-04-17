@@ -1,0 +1,17 @@
+localhost {
+  route /gitea* {
+    forward_auth localhost:9091 {
+      uri /api/verify
+      copy_headers Remote-User Remote-Groups Remote-Name Remote-Email
+    }
+    reverse_proxy gitea:3000
+  }
+
+  route /grafana* {
+    forward_auth localhost:9091 {
+      uri /api/verify
+      copy_headers Remote-User Remote-Groups Remote-Name Remote-Email
+    }
+    reverse_proxy grafana:3000
+  }
+}

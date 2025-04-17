@@ -1,0 +1,7 @@
+users:
+  aditya:
+    displayname: "Aditya"
+    password: "$2y$12$As4oQ8x6E1u1DZxwOXpMSeFt9A0a6ZyOJpp34fnVRhZtkTCIckPiK"
+    email: aditya@example.com
+    groups:
+      - admins

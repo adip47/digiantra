@@ -1,0 +1,18 @@
+auth_enabled: false
+
+server:
+  http_listen_port: 3100
+
+common:
+  path_prefix: /loki
+  storage:
+    filesystem:
+      directory: /loki
+
+ingester:
+  wal:
+    dir: /loki/wal
+
+  chunk_idle_period: 5m
+  max_chunk_age: 1h
+  max_chunk_size: 1048576
